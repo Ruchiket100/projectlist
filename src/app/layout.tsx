@@ -5,6 +5,7 @@ import SideBar from "@/components/sidebar";
 import Header from "@/components/header";
 import RightBar from "@/components/rightbar";
 const inter = Inter({ subsets: ["latin"] });
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,9 +21,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="grid grid-cols-12 sm:w-full md:w-full lg:w-[1280px] min-h-screen lg:bg-white lg:mx-auto">
+      <GoogleOAuthProvider clientId="793674078087-h8hj8teo29iqll4h8ukligcprhel30mp.apps.googleusercontent.com">
           <div className="lg:flex hidden col-span-2 border-r border-r-[0.5] border-primaryBorder"><SideBar/></div>
           <div className="col-span-12 lg:col-span-6 lg:min-w-[640px]"><Header/>{children}</div>
           <div className="lg:flex hidden col-span-3 border-x border-r-[0.5] border-primaryBorder"><RightBar/></div>
+        </GoogleOAuthProvider>
         </div>
       </body>
     </html>

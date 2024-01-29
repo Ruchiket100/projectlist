@@ -1,4 +1,6 @@
+"use client"
 import { UpvoteI, MessageI, RepostI, MenuI } from "@/utils/Icons";
+import { GoogleLogin } from "@react-oauth/google";
 
 export default function Home() {
   return (
@@ -45,6 +47,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }
