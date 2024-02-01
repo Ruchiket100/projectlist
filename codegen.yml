@@ -1,0 +1,10 @@
+overwrite: true
+schema: "https://8000-ruchiket100-projectlist-t48686sjsm3.ws-us107.gitpod.io/graphql"
+documents: "**/*.{tsx.ts}"
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - "typescript-common"
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"
